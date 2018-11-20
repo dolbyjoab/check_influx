@@ -4,7 +4,7 @@
 #
 # Copyright (c) 2018 Etienne Delsy: https://github.com/dolbyjoab
 #
-# This one has been copied from: https://github.com/shaharke 
+# This one has been copied modified from: https://github.com/shaharke 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
@@ -53,8 +53,8 @@ else:
 
 result = None
 
-if fnmatch.fnmatch(influx.options.query, '*.txt'):
-		data_folder = "/home/vagrant/"
+if fnmatch.fnmatch(influx.options.query, '*.influx'):
+		data_folder = "/opt/sensu/plugins/ctm/influx/"
 		file_to_open = data_folder + influx.options.query
 		f=open(file_to_open, "r")
 		if f.mode == 'r':
